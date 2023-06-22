@@ -1,4 +1,4 @@
-import os, rumps
+import rumps, subprocess
 
 ACTIONS = {
     'purge': """osascript -e 'do shell script "sudo purge" with administrator privileges'""",
@@ -13,7 +13,7 @@ ACTIONS = {
 class MacleanApp(rumps.App):
     def _exec(self, name: str):
         if name in ACTIONS:
-            os.system(ACTIONS[name])
+            subprocess.Popen(ACTIONS[name], shell=True)
 
     @rumps.clicked("Purge RAM")
     def purge_ram(self, _):

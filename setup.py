@@ -8,7 +8,7 @@ OPTIONS = {
         'LSUIElement': True,
     },
     'packages': ['rumps'],
-    'includes': ['os'],
+    'includes': ['subprocess'],
     'iconfile': './icon.icns',
     'resources': ['./icon.png']
 }
