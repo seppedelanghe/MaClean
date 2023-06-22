@@ -1,6 +1,6 @@
 from setuptools import setup
 
-APP = ['main.py']
+APP = ['MaClean.py']
 DATA_FILES = []
 OPTIONS = {
     'argv_emulation': True,
@@ -8,6 +8,9 @@ OPTIONS = {
         'LSUIElement': True,
     },
     'packages': ['rumps'],
+    'includes': ['os'],
+    'iconfile': './icon.icns',
+    'resources': ['./icon.png']
 }
 
 setup(
